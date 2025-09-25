@@ -1,23 +1,23 @@
 const seasonConfig = {
   primavera: { 
-    titulo: "Primavera", 
+    titulo: "🌸Primavera", 
     descricao: "Cores suaves e florais.", 
-    img: "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=600&q=80" 
+    img: "https://midias-turismo.eurodicas.com.br/wp-content/uploads/2025/02/primavera-na-europa-1.jpg.webp" 
   },
   verao: { 
-    titulo: "Verão", 
+    titulo: "☀️Verão", 
     descricao: "Cores vibrantes e quentes.", 
-    img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" 
+    img: "https://blog.topatlantico.pt/wp-content/uploads/2025/03/Onde-ir-verao-2025-Republica-Dominicana_SHT_2548810737.jpg" 
   },
   outono: { 
-    titulo: "Outono", 
+    titulo: "🍂Outono", 
     descricao: "Tons terrosos e aconchegantes.", 
-    img: "https://images.unsplash.com/photo-1476041800959-2f6bb412c8ce?auto=format&fit=crop&w=600&q=80" 
+    img: "https://dicasparaviagens.com.br/wp-content/uploads/2017/03/Outono-Principal.jpg" 
   },
   inverno: { 
-    titulo: "Inverno", 
+    titulo: "❄️Inverno", 
     descricao: "Tons frios e limpos.", 
-    img: "https://images.unsplash.com/photo-1516455207990-7a41ce80f7ee?auto=format&fit=crop&w=600&q=80" 
+    img: "https://i0.statig.com.br/bancodeimagens/imgalta/82/ra/uv/82rauv4ftakh2z3fboq6pih7d.jpg" 
   }
 };
 
@@ -32,17 +32,17 @@ function setSeason(season) {
   addLog("Mudança para " + seasonConfig[season].titulo);
 }
 
-// Log de eventos
+
 function addLog(msg) {
   const log = document.getElementById('log');
   const p = document.createElement('p');
   const time = new Date().toLocaleTimeString();
   p.textContent = `[${time}] ${msg}`;
   log.appendChild(p);
-  log.scrollTop = log.scrollHeight; // rolar para o fim
+  log.scrollTop = log.scrollHeight;
 }
 
-// Define estação inicial automática
+
 window.onload = () => {
   const initial = detectSeason();
   setSeason(initial);
